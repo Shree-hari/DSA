@@ -59,6 +59,10 @@ int main(){
     g.addEdge(1,2);
     g.addEdge(1,3);
     g.addEdge(2,3);
+    g.addEdge(4,5);
+    g.addEdge(4,7);
+    g.addEdge(5,7);
+    g.addEdge(5,6);
     g.display();
     vector<bool> vis(4,false);
     
