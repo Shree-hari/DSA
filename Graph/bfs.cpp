@@ -45,13 +45,13 @@ class graph{
             int u = q.front();
             q.pop();
             cout<<u<< " ";
-            vis[u]= true;
 
             for( auto it = adj[u].begin() ; it!=adj[u].end() ; it++ ){
-
-                q.push(*it);
-                vis[*it]=true;
-
+                
+                if(vis[*it]==false){
+                    q.push(*it);
+                    vis[*it]=true;
+                }
             }
 
         }
@@ -73,7 +73,7 @@ int main(){
     g.addEdge(3,5);
     g.addEdge(5,6);
     g.addEdge(2,4);
-    g.display();
+    // g.display();
     vector<bool> vis(7,false);
 
     g.bfs(vis,0);
