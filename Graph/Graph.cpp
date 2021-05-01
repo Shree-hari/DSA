@@ -34,6 +34,20 @@ class graph{
 
     }
 
+    void dfs(vector<bool> &vis , int s){
+
+        vis[s]=true;
+        cout<<s<<" ";
+
+        for(auto it = adj[s].begin() ; it != adj[s].end() ; it++){
+
+            if(vis[*it]==false)
+            dfs(vis,*it);
+
+        }
+
+    }
+
 };
 
 
@@ -46,6 +60,9 @@ int main(){
     g.addEdge(1,3);
     g.addEdge(2,3);
     g.display();
+    vector<bool> vis(4,false);
+
+    g.dfs(vis,0);
 	
     return 0;
 }
