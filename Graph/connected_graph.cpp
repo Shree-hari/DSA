@@ -69,7 +69,7 @@ int main(){
     for(int i = 0 ; i<4 ; i++){
       
       count++;
-      if(vis[i]!=false)
+      if(vis[i]==false)
         g.dfs(vis,0);
       
     }
